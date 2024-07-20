@@ -12,7 +12,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
 
-
 class UserController extends Controller
 {
     /**
@@ -27,10 +26,7 @@ class UserController extends Controller
         $sortField = request('sort_field', 'updated_at');
         $sortDirection = request('sort_direction', 'asc');
 
-        $query = User::query()
-//            ->where('is_admin', false)
-            ->with(['customer']) // Eager load the 'customer' relationship
-            ->orderBy($sortField, $sortDirection);
+        $query = User::query() ->orderBy($sortField, $sortDirection);
 
         if ($search) {
             $query->where('id', 'like', "%{$search}%")
@@ -53,13 +49,18 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
+            'is_admin' => 'sometimes|boolean', // Added for is_admin handling
         ]);
+
+        // Determine if user is an admin
+        $isAdmin = $request->input('is_admin', false); // Default to false if not provided
 
         // Create the new user in the database
         $user = User::create([
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'password' => Hash::make($validatedData['password']),
+            'is_admin' => $isAdmin,
         ]);
 
         Subscriber::create([
@@ -94,6 +95,7 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
             'password' => 'nullable|string|min:8', // Allow password to be nullable for updates
+            'is_admin' => 'sometimes|boolean', // Added for is_admin handling
         ]);
 
         // Update the user with the validated data
@@ -101,10 +103,13 @@ class UserController extends Controller
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'password' => $validatedData['password'] ? Hash::make($validatedData['password']) : $user->password,
+            'is_admin' => $validatedData['is_admin'] ?? $user->is_admin, // Ensure is_admin is set correctly
         ]);
 
+        // Return the updated user data as a resource
         return new UserResource($user);
     }
+
 
     /**
      * Remove the specified resource from storage.

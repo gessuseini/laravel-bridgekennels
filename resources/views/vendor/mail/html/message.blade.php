@@ -2,7 +2,7 @@
 {{-- Header --}}
 <x-slot:header>
 <x-mail::header :url="config('app.url')">
-    <span class="logo">M&T AUTOMOBILE</span>
+    <span class="logo">B-Ridge Kennels</span>
 </x-mail::header>
 </x-slot:header>
 

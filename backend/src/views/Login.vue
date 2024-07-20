@@ -1,5 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import {ref} from 'vue'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import GuestLayout from "../components/GuestLayout.vue";
 import store from "../store";
 import {useRouter} from "vue-router";
@@ -31,94 +35,61 @@ function login() {
 </script>
 
 <template>
-    <GuestLayout title="Sign in to your account">
-        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" method="POST" @submit.prevent="login">
-                <div v-if="errorMsg" class="flex items-center justify-center py-3 px-5 bg-red-500 text-white rounded">
-                    {{errorMsg}}
+    <GuestLayout>
+    <Card class="mx-auto max-w-sm">
+        <form class="space-y-6" method="POST" @submit.prevent="login">
+            <div v-if="errorMsg" class="flex items-center justify-center py-3 px-5 bg-red-500 text-white rounded">
+                {{errorMsg}}
+            </div>
+        <CardHeader>
+            <CardTitle class="text-2xl">
+                Login
+            </CardTitle>
+            <CardDescription>
+                Enter your email below to login to your account
+            </CardDescription>
+        </CardHeader>
+        <CardContent>
+            <div class="grid gap-4">
+                <div class="grid gap-2">
+                    <Label for="email">Email</Label>
+                    <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required=""
+                        v-model="user.email"
+                    />
                 </div>
-                <div>
-                    <label
-                        for="email"
-                        class="block text-sm font-medium leading-6 text-gray-900"
-                        >Email address</label
-                    >
-                    <div class="mt-2">
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            autocomplete="email"
-                            required=""
-                            v-model="user.email"
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        />
+                <div class="grid gap-2">
+                    <div class="flex items-center">
+                        <Label for="password">Password</Label>
                     </div>
-                </div>
-
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label
-                            for="password"
-                            class="block text-sm font-medium leading-6 text-gray-900"
-                            >Password</label
-                        >
-                        <div class="text-sm">
-                            <router-link
-                                :to="{ name: 'request-password' }"
-                                class="font-semibold text-indigo-600 hover:text-indigo-500"
-                                >Forgot password?</router-link
-                            >
-                        </div>
-                    </div>
-                    <div class="mt-2">
-                        <input
-                            id="password"
+                    <Input  id="password"
                             name="password"
                             type="password"
                             autocomplete="current-password"
                             required=""
-                            v-model="user.password"
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        />
-                    </div>
+                            v-model="user.password" />
                 </div>
-                <div class="flex items-center">
-                    <input id="remember-me" name="remember-me" type="checkbox" v-model="user.remember"
-                           class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"/>
-                    <label for="remember-me" class="ml-2 block text-sm text-gray-900"> Remember me </label>
-                </div>
-
-                <div>
-                    <button
+                <Button class="w-full"
                         type="submit"
-                        :disabled="loading"
-                        class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        :class="{
-                  'cursor-not-allowed': loading,
-                  'hover:bg-indigo-500': loading,
-                }"
-                    >
-                        <svg v-if="loading" class="animate-spin mr-3 mt-0.5 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Sign in
-                    </button>
-                </div>
-            </form>
-
-            <p class="mt-10 text-center text-sm text-gray-500">
-                Not a member?
-                {{ " " }}
-                <a
-                    href="#"
-                    class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-                    >Start a 14 day free trial</a
-                >
-            </p>
-        </div>
+                        :disabled="loading">
+                    <svg v-if="loading" class="animate-spin mr-3 mt-0.5 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>Login
+                </Button>
+            </div>
+            <div class="mt-4 text-center text-sm">
+                <router-link
+                    :to="{ name: 'request-password' }"
+                    class="ml-auto inline-block text-sm underline"
+                >Forgot password?</router-link>
+            </div>
+        </CardContent>
+        </form>
+    </Card>
     </GuestLayout>
 </template>
-
-<style scoped></style>

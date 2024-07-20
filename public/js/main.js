@@ -746,9 +746,6 @@ jQuery(document).ready(function($){
 		else
 			window.location.href = $(this).attr("href");
 	});
-	$(".ui-accordion .ui-accordion-header").on("click", function(){
-		$.bbq.pushState("#" + $(this).attr("id").replace("accordion-", ""));
-	});
 
 	//image controls
 	var teamSocialControls = function()
@@ -799,20 +796,6 @@ jQuery(document).ready(function($){
 		var hashString = "";
 		for(var i=0; i<hashSplit.length-1; i++)
 			hashString = hashString + hashSplit[i] + (i+1<hashSplit.length-1 ? "-" : "");
-		if(hashSplit[0].substr(0,11)!="prettyPhoto")
-		{
-			if(hashSplit[0].substr(0,7)!="filter=")
-			{
-				$('.ui-accordion .ui-accordion-header#accordion-' + decodeURIComponent($.param.fragment())).trigger("change");
-				$('.ui-accordion .ui-accordion-header#accordion-' + decodeURIComponent(hashString)).trigger("change");
-			}
-			$('.tabs .ui-tabs-nav [href="#' + decodeURIComponent(hashString) + '"]').trigger("change");
-			$('.tabs .ui-tabs-nav [href="#' + decodeURIComponent($.param.fragment()) + '"]').trigger("change");
-			if(hashSplit[0].substr(0,7)!="filter=")
-				$('.tabs .ui-accordion .ui-accordion-header#accordion-' + decodeURIComponent($.param.fragment())).trigger("change");
-			$(".testimonials-list, .our-clients-list").trigger('configuration', ['debug', false, true]);
-			$(document).scroll();
-		}
 		if(hashSplit[0].substr(0,7)=="comment")
 		{
 			if($(location.hash).length)

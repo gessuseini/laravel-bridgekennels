@@ -5,9 +5,9 @@
         <div class="max-w-md w-full space-y-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img
-                    class="mx-auto h-10 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="MT - AUTOMOBILE"
+                    class="mx-auto h-14 w-auto"
+                    src="https://b-ridgekennels.com/wp-content/uploads/2020/02/dogs_logo-removebg-preview-e1707688963650.png"
+                    alt="B-Ridge Kennels"
                 />
             </div>
             <div>
@@ -28,7 +28,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { title } = defineProps({
     title: String,
 });

@@ -16,9 +16,9 @@ export function setToken(state, token) {
     }
 }
 
-export function setCars(state, [loading, response = null]) {
+export function setDogs(state, [loading, response = null]) {
     if(response) {
-        state.cars = {
+        state.dogs = {
             data: response.data,
             links: response.meta.links,
             total: response.meta.total,
@@ -26,15 +26,14 @@ export function setCars(state, [loading, response = null]) {
             from: response.meta.from,
             to: response.meta.to,
             page: response.meta.current_page,
-
         }
     }
-    state.cars.loading = loading;
+    state.dogs.loading = loading;
 }
 
-export function setReservations(state, [ loading, response = null ]) {
-    if (response) {
-        state.reservations = {
+export function setTeamMembers(state, [loading, response = null]) {
+    if(response) {
+        state.team_members = {
             data: response.data,
             links: response.meta.links,
             total: response.meta.total,
@@ -42,9 +41,24 @@ export function setReservations(state, [ loading, response = null ]) {
             from: response.meta.from,
             to: response.meta.to,
             page: response.meta.current_page,
-        };
+        }
     }
-    state.reservations.loading = loading;
+    state.team_members.loading = loading;
+}
+
+export function setBreedings(state, [loading, response = null]) {
+    if(response) {
+        state.breedings = {
+            data: response.data,
+            links: response.meta.links,
+            total: response.meta.total,
+            limit: response.meta.per_page,
+            from: response.meta.from,
+            to: response.meta.to,
+            page: response.meta.current_page,
+        }
+    }
+    state.breedings.loading = loading;
 }
 
 export function setNewsletters(state, [loading, response = null]) {

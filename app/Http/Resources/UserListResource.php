@@ -19,7 +19,6 @@ class UserListResource extends JsonResource
             'name' => $this->name,
             'email' => $this->email,
             'is_admin' => $this->is_admin,
-            'phone_number' => $this->customer ? $this->customer->phone_number : null,
             'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),
         ];
     }

@@ -17,7 +17,7 @@ const state = {
         website_linkedin: '',
         website_theme_color: ''
     },
-    cars: {
+    dogs: {
         loading: false,
         data: [],
         links: [],
@@ -27,7 +27,17 @@ const state = {
         limit: null,
         total: null
     },
-    reservations: {
+    team_members: {
+        loading: false,
+        data: [],
+        links: [],
+        from: null,
+        to: null,
+        page: 1,
+        limit: null,
+        total: null
+    },
+    breedings: {
         loading: false,
         data: [],
         links: [],

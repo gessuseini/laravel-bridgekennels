@@ -9,14 +9,21 @@ import NotFound from "../views/NotFound.vue";
 import RequestPassword from "../views/RequestPassword.vue";
 import ResetPassword from "../views/ResetPassword.vue";
 import AppLayout from "../components/AppLayout.vue";
+import DogsLayout from "../components/DogsLayout.vue";
 import store from "../store";
-import Users from "../views/Users/Users.vue";
-import Bookings from "../views/Bookings/Bookings.vue";
-import Cars from "../views/Cars/Cars.vue";
-import Newsletters from '../views/Newsletters/Newsletters.vue';
-import Subscribers from '../views/Subscribers/Subscribers.vue';
+import Dogs from "../views/Dogs/Dogs.vue";
+import AddDog from "../views/AddDog.vue";
+import AddProduct from "../views/AddProduct.vue";
 import Settings from "../views/Settings.vue";
+import Products from "../views/Products.vue";
 import FAQs from "../views/FAQ/FAQs.vue";
+import Users from "../views/Users/Users.vue";
+import Subscribers from "../views/Subscribers/Subscribers.vue";
+import Newsletters from "../views/Newsletters/Newsletters.vue";
+import UserSettings from "../views/UserSettings.vue";
+import Analytics from "../views/Analytics.vue";
+import Breedings from "../views/Breedings/Breedings.vue";
+import TeamMembers from "../views/TeamMembers/TeamMembers.vue";
 
 const routes = [
     {
@@ -43,29 +50,30 @@ const routes = [
                 component: Dashboard,
             },
             {
-                path: "bookings",
-                name: "app.bookings",
-                component: Bookings,
+                path: "dogs",
+                component: DogsLayout,
+                children: [
+                    {
+                        path: "", // This represents /app/dogs
+                        name: "app.dogs",
+                        component: Dogs,
+                    },
+                    {
+                        path: "add-dog", // This represents /app/dogs/add-dog
+                        name: "app.add-dog",
+                        component: AddDog,
+                    },
+                ],
             },
             {
-                path: "users",
-                name: "app.users",
-                component: Users,
+                path: "products",
+                name: "app.products",
+                component: Products,
             },
             {
-                path: "cars",
-                name: "app.cars",
-                component: Cars,
-            },
-            {
-                path: "reports",
-                name: "app.reports",
-                component: Dashboard,
-            },
-            {
-                path: "newsletters",
-                name: "app.newsletters",
-                component: Newsletters,
+                path: "add-product",
+                name: "app.add-product",
+                component: AddProduct,
             },
             {
                 path: "subscribers",
@@ -73,16 +81,34 @@ const routes = [
                 component: Subscribers,
             },
             {
-                path: "profile",
-                name: "app.profile",
-                component: Dashboard,
-                children: [
-                    {
-                        path: "settings",
-                        name: "app.profile.settings",
-                        component: Dashboard,
-                    }
-                ]
+                path: "newsletters",
+                name: "app.newsletters",
+                component: Newsletters,
+            },
+            {
+                path: "users",
+                name: "app.users",
+                component: Users,
+            },
+            {
+                path: "faqs",
+                name: "app.faqs",
+                component: FAQs,
+            },
+            {
+                path: "analytics",
+                name: "app.analytics",
+                component: Analytics,
+            },
+            {
+                path: 'breedings',
+                name: 'app.breedings',
+                component: Breedings,
+            },
+            {
+                path: 'team-members',
+                name: 'app.team-members',
+                component: TeamMembers,
             },
             {
                 path: "settings",
@@ -90,9 +116,9 @@ const routes = [
                 component: Settings,
             },
             {
-                path: "faq",
-                name: "app.faq",
-                component: FAQs,
+                path: "profile/settings",
+                name: "app.profile.settings",
+                component: UserSettings,
             },
         ],
     },

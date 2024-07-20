@@ -16,8 +16,6 @@ class CreateGlobalSettingsTable extends Migration
             $table->string('website_phone_number')->default('000-000-0000');
             $table->string('website_domain')->default('www.defaultdomain.com');
             $table->string('website_contact_address')->default('123 Default Address');
-            $table->string('website_contact_address')->default('123 Default Address');
-            $table->string('website_contact_address')->default('123 Default Address');
             $table->timestamps();
         });
 

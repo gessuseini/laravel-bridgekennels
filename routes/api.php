@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\CarController;
+use App\Http\Controllers\Api\DogController;
+use App\Http\Controllers\Api\TeamMemberController;
+use App\Http\Controllers\Api\BreedingController;
 use App\Http\Controllers\Api\FAQController;
 use App\Http\Controllers\Api\NewsletterController;
-use App\Http\Controllers\Api\ReservationController;
 use App\Http\Controllers\Api\SubscriberController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\GlobalSettingsController;
@@ -30,12 +31,12 @@ Route::middleware(['auth:sanctum', 'admin'])
     Route::post('/settings', [GlobalSettingsController::class, 'store']);
 
     Route::apiResource('/faq', FAQController::class);
-    Route::apiResource('/cars', CarController::class);
-    Route::apiResource('/bookings', ReservationController::class);
-    Route::get('/bookings/today', [ReservationController::class, 'showTodaysReservations']);
+    Route::apiResource('/dogs', DogController::class);
+    Route::apiResource('/teammembers', TeamMemberController::class);
+    Route::apiResource('/breedings', BreedingController::class);
     Route::apiResource('/users', UserController::class);
     Route::post('/users', [UserController::class, 'store']);
-    Route::put('/users/{user}', [UserController::class, 'update']);
+    Route::put('/users/{id}', [UserController::class, 'update']);
     Route::apiResource('/newsletters', NewsletterController::class);
     Route::apiResource('/subscribers', SubscriberController::class);
 

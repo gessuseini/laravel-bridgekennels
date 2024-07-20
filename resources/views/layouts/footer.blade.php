@@ -1,113 +1,82 @@
-<div
-    class="row dark-gray footer-row full-width padding-top-30 padding-bottom-50"
->
-    <div class="row padding-bottom-30">
-        <div class="column column-1-3">
-            <ul class="contact-details-list">
-                <li class="sl-small-location-map">
+<!-- footer -->
+<footer class="footer layout_padding">
+<div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="footer_blog1">
+                    <div class="footer_logo"><a href="/"><img src="images/logo_white.png" alt="#" /></a></div>
+                    <p>Sed ut perspiciatis unde omnis iste natus<br>error sit voluptatem accusantium doloremque<br>laudantium, totam rem aperiam,<br>eaque ipsa quae ab illo....</p>
+                    <div class="footer_social_icon">
+                        <ul>
+                            <li><a href="{{ $globalSettings->website_facebook }}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ $globalSettings->website_twitter }}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ $globalSettings->website_linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="{{ $globalSettings->website_facebook }}"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="footer_link_heading">
+                    <h3>Useful Links</h3>
+                </div>
+                <div class="footer_blog2">
+                    <ul>
+                        <li><a href="/">> Home</a></li>
+                        <li><a href="/our-dogs">> Our Dogs</a></li>
+                        <li><a href="/gallery">> Gallery</a></li>
+                        <li><a href="/our-services">> Services</a></li>
+                        <li><a href="/about-us">> About us</a></li>
+                        <li><a href="/contact-us">> Contact</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/frequently-asked-questions">> Frequently asked questions</a></li>
+                        <li><a href="">> Privacy Policy</a></li>
+                        <li><a href="">> Cookies</a></li>
+                        <li><a href="">> Team</a></li>
+                        <li><a href="">> Gallery</a></li>
+                        <li><a href="">> 404 Error</a></li>
+                        <li><a href="">> Faq</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="footer_link_heading">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="address_infor">
                     <p>
-                        {{ $globalSettings->website_contact_address }}
+                        <span class="icon"><img src="images/location.png" alt="#" /></span>
+                        <span class="addrs">{{ $globalSettings->website_contact_address }}</span>
                     </p>
-                </li>
-            </ul>
-        </div>
-        <div class="column column-1-3">
-            <ul class="contact-details-list">
-                <li class="sl-small-phone-circle">
                     <p>
-                        Rufen Sie uns jetzt an<br />
-                        {{ $globalSettings->website_phone_number }}
+                        <span class="icon"><img src="images/phone.png" alt="#" /></span>
+                        <span class="addrs">{{ $globalSettings->website_phone_number }}</span>
                     </p>
-                </li>
-            </ul>
-        </div>
-        <div class="column column-1-3">
-            <ul class="contact-details-list">
-                <li class="sl-small-truck-tow">
-                    <p>
-                        Glasschaden Sofort melden<br />
-                        {{ $globalSettings->website_email }} <br />
-                        {{ $globalSettings->website_phone_number }}
-                    </p>
-                </li>
-            </ul>
+                </div>
+                <div class="email_address_bottom">
+                    <form>
+                        <fieldset>
+                            <div class="field_email">
+                                <input type="email" name="email" placeholder="Email" />
+                                <button><i class="fa fa-search"></i></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row row-4-4 top-border page-padding-top">
-        <div class="column column-1-4">
-            <h6 class="box-header">ÜBER UNS</h6>
-            <ul class="list simple margin-top-20">
-                <li>Zürcherstrasse 22</li>
-                <li><span>Mobile:</span>+41 79 791 79 97</li>
-                <li>
-            <span>E-mail:</span
-            ><a href="mailto:{{ $globalSettings->website_email }}">{{ $globalSettings->website_email }}</a>
-                </li>
-            </ul>
-            <ul class="social-icons gray margin-top-26">
-                <li>
-                    <a
-                        target="_blank"
-                        href="{{ $globalSettings->website_facebook }}"
-                        class="social-facebook"
-                        title="facebook"
-                    ></a>
-                </li>
-                <li>
-                    <a
-                        target="_blank"
-                        href="{{ $globalSettings->website_twitter }}"
-                        class="social-twitter"
-                        title="twitter"
-                    ></a>
-                </li>
-                <li>
-                    <a
-                        target="_blank"
-                        href="{{ $globalSettings->website_linkedin }}"
-                        class="social-linkedin"
-                        title="linkedin"
-                    ></a>
-                </li>
-                <li>
-                    <a
-                        href="{{ $globalSettings->website_instagram }}"
-                        class="social-pinterest"
-                        title="pinterest"
-                    ></a>
-                </li>
-            </ul>
-        </div>
-        <div class="column column-1-4">
-            <h6 class="box-header">OUR SERVICES</h6>
-            <ul class="list margin-top-20">
-                <li class="template-bullet">Gross & Kleine Service</li>
-                <li class="template-bullet">MFK Check</li>
-                <li class="template-bullet">Frontscheiben ersetzen</li>
-                <li class="template-bullet">Klima Service</li>
-                <li class="template-bullet">Bremsen Service</li>
-                <li class="template-bullet">Felgen Reparatur</li>
-                <li class="template-bullet">Karroserie Reparaturen</li>
-                <li class="template-bullet">...</li>
-            </ul>
-        </div>
-        <div class="column column-1-4">
-            <h6 class="box-header">ÖFFUNGSZEITEN</h6>
-            <ul class="list simple margin-top-20">
-                <li><span>MO:</span>08:30 - 17:00</li>
-                <li><span>DI:</span>08:30 - 17:00</li>
-                <li><span>MI:</span>08:30 - 17:00</li>
-                <li><span>DO:</span>08:30 - 17:00</li>
-                <li><span>FR:</span>08:30 - 17:00</li>
-                <li><span>SA:</span>08:30 - 17:00</li>
-                <li><span>SO:</span>Geschlossen</li>
-            </ul>
+</footer>
+<!-- end footer -->
+<!-- copyright section -->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>Copyright © {{ $globalSettings->website_name }} 2024. Made by <a style="color: #00d084" href="https://orgesuseini.com/">orgesuseini</a>.</p>
+            </div>
         </div>
     </div>
 </div>
-<div class="row align-center padding-top-bottom-30">
-    <span class="copyright"
-    >Copyright © 2023 - {{ $globalSettings->website_name }}
-    </span
-    >
-</div>
+<!-- end copyright section -->

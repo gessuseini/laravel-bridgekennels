@@ -4,12 +4,12 @@
             <div class="flex items-center justify-center p-6 sm:p-12">
                 <div class="w-full">
                     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                        {{ __('Danke für\'s Registrieren! Bevor Sie beginnen, können Sie Ihre E-Mail-Adresse überprüfen, indem Sie auf den Link klicken, den wir Ihnen gerade per E-Mail zugesandt haben. Wenn Sie die E-Mail nicht erhalten haben, senden wir Ihnen gerne eine neue zu.') }}
+                        {{ __('Thank you for registering! Before you get started, you can verify your email address by clicking on the link we just emailed you. If you haven\'t received the email, we can resend it to you.') }}
                     </div>
 
                     @if (session('status') == 'verification-link-sent')
                         <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
-                            {{ __('Ein neuer Bestätigungslink wurde an die E-Mail-Adresse gesendet, die Sie bei der Registrierung angegeben haben.') }}
+                            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
                         </div>
                     @endif
 
@@ -19,7 +19,7 @@
 
                             <div>
                                 <x-primary-button>
-                                    {{ __('Bestätigungsmail erneut senden') }}
+                                    {{ __('Resend Verification Email') }}
                                 </x-primary-button>
                             </div>
                         </form>
@@ -28,7 +28,7 @@
                             @csrf
 
                             <button type="submit" style="text-decoration: none;" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                                {{ __('Ausloggen') }}
+                                {{ __('Logout') }}
                             </button>
                         </form>
                     </div>

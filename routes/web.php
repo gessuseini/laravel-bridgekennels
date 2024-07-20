@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ReservationController;
-use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\NewsletterController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,13 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\CarController::class, 'latestCars']);
-
-Route::get('/car/{car:vehicle_slug}', [\App\Http\Controllers\CarController::class, 'view'])->name('car.view');
-
+Route::get('/', [\App\Http\Controllers\DogController::class, 'latestDogs']);
 Route::get('/our-services', function () {
     return view('our-services');
 });
+
+Route::get('/dog/{dog:dog_slug}', [\App\Http\Controllers\DogController::class, 'view'])->name('dog.view');
+
+Route::get('/our-dogs', [\App\Http\Controllers\DogController::class, 'index']);
+Route::get('/filter-dogs', [\App\Http\Controllers\DogController::class, 'filterDogs']);
+
+Route::get('/puppies-breedings', [\App\Http\Controllers\DogController::class, 'pindex']);
+Route::get('/filter-puppies', [\App\Http\Controllers\DogController::class, 'filterPuppies']);
+
 
 Route::get('/about-us', function () {
     return view('about-us');
@@ -36,8 +40,6 @@ Route::get('/contact-us', function () {
 Route::get('/our-team', function () {
     return view('our-team');
 });
-
-Route::get('/cars', [\App\Http\Controllers\CarController::class, 'index']);
 
 Route::get('/thankyou', function () {
     return view('thankyou');
@@ -54,9 +56,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.main');
     })->name('dashboard');
-    Route::get('/appointments', [ReservationController::class, 'index'] )->name('appointments');
-    Route::get('/make-appointment', [ReservationController::class, 'create'])->name('make-appointment');
-    Route::post('/make-appointment', [ReservationController::class, 'store'])->name('store-appointment');
 
 
 });
