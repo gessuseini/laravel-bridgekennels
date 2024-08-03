@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Dog;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
+use App\Notifications\DogRequest;
+use App\Models\User;
+use Illuminate\Support\Facades\Notification;
 
 class DogController extends Controller
 {
@@ -56,7 +58,7 @@ class DogController extends Controller
                 ->orderBy('updated_at', 'desc')
                 ->get();
 
-            // Return partial view without layout
+            // Return partial view without layoutS
             return view('puppy.puppies-list', compact('dogs'));
         }
         else {
@@ -70,6 +72,36 @@ class DogController extends Controller
         }
     }
 
+    public function showRequestForm($id)
+    {
+        $dog = Dog::findOrFail($id);
+        return view('request-dog', compact('dog'));
+    }
+
+
+    public function sendRequest(Request $request)
+    {
+        $data = $request->validate([
+            'dog_id' => 'required|exists:dogs,id',
+            'client_name' => 'required|string|max:255',
+            'client_surname' => 'required|string|max:255',
+            'client_email' => 'required|email|max:255',
+            'client_phone' => 'required|string|max:255',
+            'description' => 'required|string|max:1000',
+        ]);
+
+        // Fetch dog details
+        $dog = Dog::findOrFail($data['dog_id']);
+
+        // Fetch all admin users
+        $adminUsers = User::where('is_admin', true)->get();
+
+        // Send notification to all admin users
+        Notification::sendNow($adminUsers, new DogRequest($dog, $data));
+
+        return redirect()->route('home')->with('success', 'Your request has been sent successfully!');
+    }
+
     public function latestDogs()
     {
         $dogs = Dog::orderBy('created_at', 'desc')->paginate(5);
@@ -78,6 +110,6 @@ class DogController extends Controller
 
     public function view(Dog $dog)
     {
-        return view('dog.view', compact('dog'));
+        return view('dog.view', ['dog' => $dog]);
     }
 }

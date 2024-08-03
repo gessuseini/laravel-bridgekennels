@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-12">
                 <div class="footer_blog1">
-                    <div class="footer_logo"><a href="/"><img src="images/logo_white.png" alt="#" /></a></div>
+                    <div class="footer_logo"><a href="/"><img src="../images/logo_white.png" alt="#" /></a></div>
                     <p>Sed ut perspiciatis unde omnis iste natus<br>error sit voluptatem accusantium doloremque<br>laudantium, totam rem aperiam,<br>eaque ipsa quae ab illo....</p>
                     <div class="footer_social_icon">
                         <ul>
@@ -46,11 +46,11 @@
                 </div>
                 <div class="address_infor">
                     <p>
-                        <span class="icon"><img src="images/location.png" alt="#" /></span>
+                        <span class="icon"><img src="../images/location.png" alt="#" /></span>
                         <span class="addrs">{{ $globalSettings->website_contact_address }}</span>
                     </p>
                     <p>
-                        <span class="icon"><img src="images/phone.png" alt="#" /></span>
+                        <span class="icon"><img src="../images/phone.png" alt="#" /></span>
                         <span class="addrs">{{ $globalSettings->website_phone_number }}</span>
                     </p>
                 </div>

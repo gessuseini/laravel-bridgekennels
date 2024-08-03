@@ -5,16 +5,16 @@
             <div class="col-lg-3">
                 <div class="full">
                     <div class="logo">
-                        <a href="/"><img src="{{ ('images/logo.png') }}" alt="#" /></a>
+                        <a href="/"><img src="{{ ('../images/logo.png') }}" alt="#" /></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 site_information">g
+            <div class="col-lg-9 site_information">
                 <div class="row">
                     <div class="col-md-4">
                         <ul>
                             <li>
-                                <span class="icon_img"><img src="images/mail_icon.png" alt="#" /></span>
+                                <span class="icon_img"><img src="../images/mail_icon.png" alt="#" /></span>
                                 <span class="infor_text"><strong class="theme_color">Mail us:</strong><br>{{ $globalSettings->website_email }}</span>
                             </li>
                         </ul>
@@ -22,7 +22,7 @@
                     <div class="col-md-4">
                         <ul>
                             <li>
-                                <span class="icon_img"><img src="images/phone_icon.png" alt="#" /></span>
+                                <span class="icon_img"><img src="../images/phone_icon.png" alt="#" /></span>
                                 <span class="infor_text"><strong class="theme_color">Call us:</strong><br>{{ $globalSettings->website_phone_number }}</span>
                             </li>
                         </ul>
@@ -30,7 +30,7 @@
                     <div class="col-md-4">
                         <ul>
                             <li>
-                                <span class="icon_img"><img src="images/location_icon.png" alt="#" /></span>
+                                <span class="icon_img"><img src="../images/location_icon.png" alt="#" /></span>
                                 <span class="infor_text"><strong class="theme_color">Address:</strong><br>{{ $globalSettings->website_contact_address }}</span>
                             </li>
                         </ul>

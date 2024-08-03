@@ -30,7 +30,7 @@
 
     <style>
         .slider1 {
-            background: url("http://b-ridgekennels.com/wp-content/uploads/2024/02/pit-bull.png");
+            background: url("https://b-ridgekennels.com/wp-content/uploads/2024/02/pit-bull.png");
         }
 
         .slider2 {
@@ -42,7 +42,7 @@
         }
 
         .innerpage_banner {
-            background: url("http://b-ridgekennels.com/wp-content/uploads/2024/02/pit-bull.png");
+            background: url("https://b-ridgekennels.com/wp-content/uploads/2024/02/pit-bull.png");
         }
     </style>
 

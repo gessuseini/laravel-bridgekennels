@@ -61,10 +61,7 @@ class UserController extends Controller
             'email' => $validatedData['email'],
             'password' => Hash::make($validatedData['password']),
             'is_admin' => $isAdmin,
-        ]);
-
-        Subscriber::create([
-            'email' => $validatedData['email'],
+            'email_verified_at' => now(),
         ]);
 
         return new UserResource($user);

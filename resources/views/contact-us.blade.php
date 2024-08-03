@@ -27,7 +27,7 @@
                             <h5>Send us a Message</h5>
                         </div>
                         <div class="center">
-                            <p><a href="https://html.design/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="067f697374636b676f6a46616b676f6a2865696b">[email&#160;protected]</a></p>
+                            <p>{{ $globalSettings->website_email }}</p>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                             <h5>Call us</h5>
                         </div>
                         <div class="center">
-                            <p>987-654-3210</p>
+                            <p>{{ $globalSettings->website_phone_number }}</p>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                             <h5>Our Location</h5>
                         </div>
                         <div class="center">
-                            <p>8386 Keyshawn Springs Suite 214</p>
+                            <p>{{ $globalSettings->website_contact_address }}</p>
                         </div>
                     </div>
                 </div>

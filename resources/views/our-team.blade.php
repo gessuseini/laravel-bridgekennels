@@ -29,25 +29,27 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-4 margin_top_30">
-                    <div class="full">
-                        <div class="team_img">
-                            <img class="img-responsive" src="images/member1.jpg" alt="#" />
-                        </div>
-                        <div class="team_cont">
-                            <h3>Lian Herry</h3>
-                            <p>Trainer</p>
-                        </div>
-                        <div class="team_social_icon">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
+                @foreach($team_members as $team_member)
+                    <div class="col-sm-6 col-md-6 col-lg-4 margin_top_30">
+                        <div class="full">
+                            <div class="team_img">
+                                <img class="img-responsive" src="{{ $team_member->member_image }}" alt="#" />
+                            </div>
+                            <div class="team_cont">
+                                <h3>{{ $team_member->member_name }}</h3>
+                                <p>{{ $team_member->member_role }}</p>
+                            </div>
+                            <div class="team_social_icon">
+                                <ul>
+                                    <li><a href="{{ $team_member->member_facebook }}"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="{{ $team_member->member_twitter }}"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="{{ $team_member->member_linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="{{ $team_member->member_google_plus }}"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
