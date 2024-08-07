@@ -13,7 +13,6 @@ import DogsLayout from "../components/DogsLayout.vue";
 import store from "../store";
 import Dogs from "../views/Dogs/Dogs.vue";
 import AddDog from "../views/AddDog.vue";
-import AddProduct from "../views/AddProduct.vue";
 import Settings from "../views/Settings.vue";
 import Products from "../views/Products.vue";
 import FAQs from "../views/FAQ/FAQs.vue";
@@ -69,11 +68,6 @@ const routes = [
                 path: "products",
                 name: "app.products",
                 component: Products,
-            },
-            {
-                path: "add-product",
-                name: "app.add-product",
-                component: AddProduct,
             },
             {
                 path: "subscribers",
