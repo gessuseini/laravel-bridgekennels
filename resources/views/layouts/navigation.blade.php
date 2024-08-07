@@ -5,7 +5,7 @@
             <div class="col-lg-3">
                 <div class="full">
                     <div class="logo">
-                        <a href="/"><img src="{{ ('../images/logo.png') }}" alt="#" /></a>
+                        <a href="/"><img style="width: 250px; height: 120px;" src="{{ ('../images/default-monochrome.svg') }}" alt="#" /></a>
                     </div>
                 </div>
             </div>
@@ -15,7 +15,7 @@
                         <ul>
                             <li>
                                 <span class="icon_img"><img src="../images/mail_icon.png" alt="#" /></span>
-                                <span class="infor_text"><strong class="theme_color">Mail us:</strong><br>{{ $globalSettings->website_email }}</span>
+                                <span class="infor_text"><strong class="text-gray-dark">Mail us:</strong><br><span style="color: white;">{{ $globalSettings->website_email }}</span></span>
                             </li>
                         </ul>
                     </div>
@@ -23,7 +23,7 @@
                         <ul>
                             <li>
                                 <span class="icon_img"><img src="../images/phone_icon.png" alt="#" /></span>
-                                <span class="infor_text"><strong class="theme_color">Call us:</strong><br>{{ $globalSettings->website_phone_number }}</span>
+                                <span class="infor_text"><strong class="text-gray-dark">Call us:</strong><br><span style="color: white;">{{ $globalSettings->website_phone_number }}</span></span>
                             </li>
                         </ul>
                     </div>
@@ -31,7 +31,7 @@
                         <ul>
                             <li>
                                 <span class="icon_img"><img src="../images/location_icon.png" alt="#" /></span>
-                                <span class="infor_text"><strong class="theme_color">Address:</strong><br>{{ $globalSettings->website_contact_address }}</span>
+                                <span class="infor_text"><strong class="text-gray-dark">Address:</strong><br><span style="color: white;">{{ $globalSettings->website_contact_address }}</span></span>
                             </li>
                         </ul>
                     </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="full header_bottom_section">
+                <div class="full header_bottom_section" style="background-color: white;">
                     <div class="main_menu">
                         <nav class="navbar navbar-inverse navbar-toggleable-md">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cloapediamenu" aria-controls="cloapediamenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@
                                     <li class="nav-item dropdown has-submenu">
                                         <a class="nav-link dropdown-toggle" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                                         <ul class="dropdown-menu" aria-labelledby="dropdown02">
-                                            <li><a class="dropdown-item" href="/about-us">Dog training</a></li>
+                                            <li><a style="color: black;" class="dropdown-item" href="/about-us">Dog training</a></li>
                                             <li><a class="dropdown-item" href="/our-team">Example.</a></li>
                                             <li><a class="dropdown-item" href="/contact-us">Example 2.</a></li>
                                         </ul>

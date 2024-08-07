@@ -30,19 +30,39 @@
 
     <style>
         .slider1 {
-            background: url("https://b-ridgekennels.com/wp-content/uploads/2024/02/pit-bull.png");
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url("https://monsterbullies.wpenginepowered.com/wp-content/uploads/2023/01/frontpage-banner-dogs.png");
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
         }
 
         .slider2 {
-            background: url("https://png.pngtree.com/background/20230610/original/pngtree-three-black-pit-bull-dogs-sitting-i-front-of-a-window-picture-image_3102248.jpg");
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url("https://monsterbullies.wpenginepowered.com/wp-content/uploads/2023/01/frontpage-banner-dogs.png");
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
         }
 
         .slider3 {
-            background: url("https://png.pngtree.com/background/20230528/original/pngtree-three-pit-bull-dogs-sitting-in-the-middle-of-some-leaves-picture-image_2774133.jpg");
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url("https://monsterbullies.wpenginepowered.com/wp-content/uploads/2023/01/frontpage-banner-dogs.png");
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
         }
 
+        /*.slider2 {*/
+        /*    background: url("https://png.pngtree.com/background/20230610/original/pngtree-three-black-pit-bull-dogs-sitting-i-front-of-a-window-picture-image_3102248.jpg");*/
+        /*}*/
+
+        /*.slider3 {*/
+        /*    background: url("https://png.pngtree.com/background/20230528/original/pngtree-three-pit-bull-dogs-sitting-in-the-middle-of-some-leaves-picture-image_2774133.jpg");*/
+        /*}*/
+
         .innerpage_banner {
-            background: url("https://b-ridgekennels.com/wp-content/uploads/2024/02/pit-bull.png");
+            background: url("https://png.pngtree.com/background/20230610/original/pngtree-three-black-pit-bull-dogs-sitting-i-front-of-a-window-picture-image_3102248.jpg");
         }
     </style>
 

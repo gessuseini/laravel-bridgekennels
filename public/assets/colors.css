@@ -5,7 +5,7 @@
 **************************************/
 
 
-/* colors 
+/* colors
 **************************************/
 
 .new-price,
@@ -29,11 +29,11 @@ h3 span,
 .navbar-inverse .navbar-nav .nav-link.active,
 .navbar-inverse .navbar-nav .nav-link.open,
 .navbar-inverse .navbar-nav .open>.nav-link {
-    color: #111428 !important;
+    color: #00A0D1 !important;
 }
 
 .theme_color {
-    color: #feb61a;
+    color: #00A0D1;
 }
 
 .magnifier {
@@ -56,8 +56,8 @@ div.tab button.active,
 .topbar-section,
 .navbar-inverse .navbar-toggler {
     color: #ffffff !important;
-    border-color: #feb61a;
-    background-color: #feb61a;
+    border-color: #00A0D1;
+    background-color: #00A0D1;
 }
 
 .testimonials blockquote:hover:after {

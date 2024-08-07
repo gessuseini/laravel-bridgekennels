@@ -104,7 +104,7 @@ class DogController extends Controller
 
     public function latestDogs()
     {
-        $dogs = Dog::orderBy('created_at', 'desc')->paginate(5);
+        $dogs = Dog::orderBy('created_at', 'desc')->paginate(10);
         return view('welcome', compact('dogs'));
     }
 

@@ -65,7 +65,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex flex-col justify-between mb-3 space-y-4">
+    <div class="flex flex-col justify-between m-5 p-5 space-y-4">
         <h1 class="text-3xl font-semibold">Settings</h1>
         <div v-if="notification" class="w-1/4 p-4 mb-4 text-white bg-green-600 rounded-md">
             {{ notification }}

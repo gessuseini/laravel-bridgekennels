@@ -63,7 +63,7 @@
             <div class="row">
                 <div class="col-lg-7 col-md-8 col-sm-12">
                     <div class="full heading_s1">
-                        <h2><img src="images/icon_head.png" alt="#"> <span>About us</span></h2>
+                        <h2><span>About us</span></h2>
                     </div>
                     <div class="full">
                         <h3 class="margin_top_30">Welcome to Petto</h3>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-lg-5 col-md-4 col-sm-12">
                     <div class="about_img">
-                        <img src="images/black_dog.png" alt="#" />
+                        <img src="https://pngimg.com/d/dog_PNG50327.png" alt="#" />
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="full heading_s2 text_align_center margin_bottom_50">
-                        <h2><img src="images/icon_head.png" alt="#"><br><span>Our latest dogs</span></h2>
+                        <h2><br><span>Our latest dogs</span></h2>
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@
                     <div class="pet_info">
                         <div class="pet_img">
                             <img class="img-responsive" src="{{ $dog->dog_image }}" alt="#" />
-                            <div class="overview_search"><a hhref="# "><i class="fa fa-search"></i></a></div>
+                            <a style="text-decoration: none; align-content: center;" href=" {{ route('dog.view', $dog->dog_slug) }} "><div class="overview_search"><i class="fa fa-search"></i></div></a>
                         </div>
                         <div class="petinfo">
                             <div class="pet_infotop">
@@ -157,6 +157,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                     <!-- end pets inform -->
                 </div>
                 @endforeach
@@ -172,12 +173,12 @@
 
     <!-- end pets family section -->
     <!-- service section -->
-    <section class="layout_padding services_section yellow_bg pettr">
+    <section class="layout_padding services_section yellow_bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="full heading_s2 text_align_center margin_bottom_50">
-                        <h2><img src="images/icon_head.png" alt="#"><br><span>Our Services</span></h2>
+                        <h2><br><span>Our Services</span></h2>
                     </div>
                 </div>
             </div>
@@ -280,7 +281,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="full heading_s2 text_align_center margin_bottom_50">
-                        <h2><img src="images/icon_head.png" alt="#"><br><span>Gallery</span></h2>
+                        <h2><br><span>Gallery</span></h2>
                     </div>
                 </div>
             </div>
@@ -338,7 +339,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="full heading_s2 text_align_center margin_bottom_50">
-                        <h2><img src="images/icon_head.png" alt="#"><br><span>Our Services</span></h2>
+                        <h2><br><span>Our Services</span></h2>
                     </div>
                 </div>
             </div>
@@ -426,6 +427,125 @@
         </div>
     </section>
     <!-- end price table section -->
+
+    <!-- testimonial section -->
+    <section class="layout_padding dark-section testimonial_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 white_fonts">
+                    <div class="full heading_s2 text_align_center margin_bottom_50">
+                        <h2><img src="images/icon_head_white.png" alt="#"><br><span>Testimonials</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonial_slider" data-slide-to="1"></li>
+                            <li data-target="#testimonial_slider" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item carousel-item active">
+                                <div class="testimonial_inner_blog">
+                                    <div class="testimonial_cont">
+                                        <p>Sed ut perspiciatis unde omnis iste natus<br>
+                                            error sit voluptatem accusantium doloremque<br>
+                                            laudantium, totam rem aperiam,<br>
+                                            eaque ipsa.....<br><br><strong>- Daniel Mark</strong>
+                                        </p>
+                                    </div>
+                                    <div class="client_img">
+                                        <div class="media-left">
+                                            <img src="images/client_img.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="testimonial_inner_blog">
+                                    <div class="testimonial_cont">
+                                        <p>Sed ut perspiciatis unde omnis iste natus<br>
+                                            error sit voluptatem accusantium doloremque<br>
+                                            laudantium, totam rem aperiam,<br>
+                                            eaque ipsa.....<br><br><strong>- Daniel Mark</strong>
+                                        </p>
+                                    </div>
+                                    <div class="client_img">
+                                        <div class="media-left">
+                                            <img src="images/client_img.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="testimonial_inner_blog">
+                                    <div class="testimonial_cont">
+                                        <p>Sed ut perspiciatis unde omnis iste natus<br>
+                                            error sit voluptatem accusantium doloremque<br>
+                                            laudantium, totam rem aperiam,<br>
+                                            eaque ipsa.....<br><br><strong>- Daniel Mark</strong>
+                                        </p>
+                                    </div>
+                                    <div class="client_img">
+                                        <div class="media-left">
+                                            <img src="images/client_img.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end testimonial section -->
+
+    <!-- faq section -->
+    @if($faqs->count() > 0)
+    <section class="layout_padding price_section white_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full heading_s2 text_align_center margin_bottom_50">
+                        <h2><br><span>Frequently Asked Questions</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    <div id="faq" class="accordion faq_section">
+                            @foreach ($faqs as $index => $faq)
+                                <div class="card">
+                                    <div class="card-header p-2" id="faq-{{ $index }}">
+                                        <h5 class="mb-0">
+                                            <button class="btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ $index }}" aria-expanded="true" aria-controls="collapse{{ $index }}">
+                                                Q: {{ $faq->question }}
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse{{ $index }}" class="collapse @if($index == 0) show @endif" aria-labelledby="heading{{ $index }}" data-parent="#faq">
+                                        <div class="card-body">
+                                            <p>{{ $faq->answer }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @else
+        <p>No FAQs available.</p>
+    @endif
+    <!-- end faq section -->
+
+
 
     <x-subscribe-form />
 

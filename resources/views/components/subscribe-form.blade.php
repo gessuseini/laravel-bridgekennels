@@ -1,6 +1,6 @@
 <div>
     <!-- subscribe newsletter -->
-    <section class="layout_padding subscribe_newsletters yellow_bg pettr">
+    <section class="layout_padding subscribe_newsletters yellow_bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-12">

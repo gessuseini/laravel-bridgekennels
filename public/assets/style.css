@@ -584,7 +584,7 @@ form#commant_form div.field textarea.custom_field {
 .main-heading::after {
     width: 30px;
     height: 4px;
-    background: #feb61a;
+    background: #00A0D1;
     content: "";
     margin: 0;
     display: block;
@@ -683,7 +683,7 @@ div.tab button:hover {
 div.tab button,
 .topbar-section,
 .topbar-section a {
-    color: rgba(255, 255, 255, 1) !important;
+    color: #000000 !important;
 }
 
 div.tab button:hover,
@@ -914,7 +914,7 @@ a {
     font-size: 15px;
     font-weight: 600;
     line-height: normal;
-    color: #ffffff;
+    color: #000000;
     letter-spacing: 0px;
     transition: ease all 0.5s;
     letter-spacing: 0.5px;
@@ -960,15 +960,19 @@ a {
     border: 0;
     margin-top: 0 !important;
     border-color: #edeff2;
-    background-color: #121212;
+    background-color: #000000;
 }
 
 .header .dropdown-item {
     text-transform: capitalize;
     font-size: 14px;
     padding: 10px 1.5rem;
-    background-color: #111428;
+    background-color: #ffffff;
     font-weight: 300;
+}
+
+.header .dropdown-item:hover {
+    background-color: antiquewhite;
 }
 
 .header .dropdown ul li:last-child {
@@ -1085,7 +1089,7 @@ a {
 
 .header_bottom_section {
     min-height: 70px;
-    background: #feb61a;
+    background: #00A0D1;
 }
 
 .header_bottom_section .main_menu {
@@ -1331,7 +1335,7 @@ a {
 }
 
 .yellow_bg {
-    background: #feb61a;
+    background: #00A0D1;
 }
 
 .pettr {
@@ -1361,7 +1365,7 @@ p.large_1 {
 
 .form_contact_main button:hover,
 .form_contact_main button:focus {
-    background: #feb61a;
+    background: #00A0D1;
     color: #111428;
 }
 
@@ -2587,7 +2591,7 @@ ol.workinghours li span,
 .slider_coint_inner p::after {
     width: 125px;
     height: 21px;
-    background: #feb61a;
+    background: #00A0D1;
     content: "";
     display: block;
     position: absolute;
@@ -2614,7 +2618,7 @@ ol.workinghours li span,
 }
 
 #main_slider ol.carousel-indicators li.active {
-    background: #feb61a;
+    background: #00A0D1;
 }
 
 
@@ -2670,7 +2674,7 @@ ol.workinghours li span,
 .heading_s1 h2 span::after {
     width: 32px;
     height: 22px;
-    background: #feb61a;
+    background: #00A0D1;
     content: "";
     display: block;
     position: absolute;
@@ -2682,7 +2686,7 @@ ol.workinghours li span,
 .heading_s1 h3 span::after {
     width: 32px;
     height: 22px;
-    background: #feb61a;
+    background: #00A0D1;
     content: "";
     display: block;
     position: absolute;
@@ -2869,7 +2873,7 @@ ol.workinghours li span,
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(254, 182, 26, 0.95);
+    background: rgba(0, 160, 209, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2916,7 +2920,7 @@ ol.workinghours li span,
 }
 
 .service_img img {
-    box-shadow: 0 0 25px #c37c00;
+    box-shadow: 0 0 25px #0025c3;
 }
 
 .services_section_single .service_img img {
@@ -3014,7 +3018,7 @@ ol.workinghours li span,
 }
 
 #testimonial_slider .carousel-indicators li.active {
-    background: #feb61a;
+    background: #00A0D1;
 }
 
 section.testimonial_section {
@@ -3117,7 +3121,7 @@ h3.price_tag {
 }
 
 .subscribe_form button {
-    background: #feb61a;
+    background: #00A0D1;
     position: absolute;
     right: 0;
     top: 0;
@@ -3198,7 +3202,7 @@ h3.price_tag {
 
 .footer_social_icon ul li a:hover,
 .footer_social_icon ul li a:focus {
-    background: #feb61a;
+    background: #00A0D1;
     color: #111428;
 }
 
@@ -3248,7 +3252,7 @@ h3.price_tag {
 
 .footer_blog2 ul li a:hover,
 .footer_blog2 ul li a:focus {
-    color: #feb61a;
+    color: #00A0D1;
 }
 
 .address_infor .addrs {
@@ -3286,7 +3290,7 @@ h3.price_tag {
     background: #111428;
     border: none;
     cursor: pointer;
-    color: #feb61a;
+    color: #00A0D1;
     border-radius: 100%;
     top: 3px;
     font-size: 18px;
@@ -3381,7 +3385,7 @@ h3.price_tag {
 
 .testimonial_qoute {
     background: url("../images/yellow_pettr.png");
-    background-color: #feb61a;
+    background-color: #00A0D1;
     padding: 49px;
     background-size: auto;
     color: #fff;
@@ -3390,7 +3394,7 @@ h3.price_tag {
 
 .testimonial_qoute {
     background: url("../images/yellow_pettr.png");
-    background-color: #feb61a;
+    background-color: #00A0D1;
     padding: 50px 50px 50px 75px;
     background-size: auto;
     color: #fff;
@@ -3462,7 +3466,7 @@ h3.price_tag {
 }
 
 .testimonial_page #testimonial_slider .carousel-indicators li.active {
-    background: #feb61a;
+    background: #00A0D1;
 }
 
 /**-------------------- team page --------------------**/
@@ -3554,7 +3558,7 @@ h3.price_tag {
 
 .team_social_icon ul li a:hover,
 .team_social_icon ul li a:focus {
-    color: #feb61a;
+    color: #00A0D1;
 }
 
 /**-------------------- 404 error page --------------------**/
@@ -3668,10 +3672,10 @@ h3.price_tag {
 }
 
 .filter-button:hover {
-    border: 1px solid #feb61a;
+    border: 1px solid #00A0D1;
     border-radius: 5px;
     text-align: center;
-    background: #feb61a;
+    background: #00A0D1;
     color: #ffffff;
 }
 
@@ -3862,14 +3866,14 @@ p.post_date {
 
 .categary a:hover,
 .categary a:focus {
-    color: #feb61a;
+    color: #00A0D1;
 }
 
 .tags a:hover,
 .tags a:focus {
     color: #111 !important;
-    background: #feb61a;
-    border-color: #feb61a;
+    background: #00A0D1;
+    border-color: #00A0D1;
 }
 
 /*-------------------------------------------------------------------
@@ -3983,7 +3987,7 @@ p.post_date {
 
 .social_icon li a:hover,
 .social_icon li a:focus {
-    color: #feb61a;
+    color: #00A0D1;
 }
 
 .img_post {
@@ -4073,7 +4077,7 @@ p.post_date {
 
 .form_full .btn.button_custom:hover,
 .form_full .btn.button_custom:focus {
-    background: #feb61a;
+    background: #00A0D1;
 }
 
 form#commant_form div.field textarea.custom_field {
@@ -4123,14 +4127,14 @@ form#commant_form div.field textarea.custom_field {
 .pagination>li>span:hover {
     z-index: 2;
     color: #fff;
-    background-color: #feb61a;
-    border-color: #feb61a;
+    background-color: #00A0D1;
+    border-color: #00A0D1;
 }
 
 .pagination>.active>a {
-    background: #feb61a;
+    background: #00A0D1;
     color: #fff;
-    border-color: #feb61a;
+    border-color: #00A0D1;
 }
 
 /*-------------------------------------------------------------------

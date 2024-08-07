@@ -29,7 +29,7 @@
                 <div class="col-xl-10 col-lg-12">
                     <!-- pets inform -->
                     <div class="pet_info pet_details">
-                        <div class="pet_img" style="padding-left: 4rem !important; padding-bottom: 4rem !important; padding-right: 4rem !important;">
+                        <div class="pet_img" style="padding-left: 4rem !important; padding-bottom: 4rem !important; padding-right: 3rem !important;">
                             <img class="img-responsive" src="{{ $dog->dog_image }}" alt="#" />
                         </div>
                         <div class="petinfo h-full">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FAQRequest;
 use App\Http\Resources\FAQListResource;
 use App\Http\Resources\FAQResource;
+use Illuminate\Support\Facades\Cache;
 use App\Models\FAQ;
 
 class FAQController extends Controller
@@ -40,6 +41,7 @@ class FAQController extends Controller
         $data['updated_by'] = $request->user()->id;
 
         $faq = FAQ::create($data);
+        Cache::forget('faqs');
 
         return new FAQResource($faq);
     }
@@ -68,6 +70,7 @@ class FAQController extends Controller
         $data['updated_by'] = $request->user()->id;
 
         $faq->update($data);
+        Cache::forget('faqs');
 
         return new FAQResource($faq);
     }
@@ -81,6 +84,7 @@ class FAQController extends Controller
     public function destroy(FAQ $faq)
     {
         $faq->delete();
+        Cache::forget('faqs');
 
         return response()->noContent();
     }
